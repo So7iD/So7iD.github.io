@@ -1,0 +1,40 @@
+ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+li {
+  padding: 50px;
+}
+
+.header-logo {
+  display: inline-block;
+  width: 220px;
+  padding: 11px 0 7px 0;
+
+  font-size: 24px;
+  font-family: "Cuprum","Arial", sans-serif;
+  vertical-align: middle;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: #ee3643;
+  box-shadow: 0 5px 0 0 #b52933;
+}
+
+.header-logo:hover {
+  background-color: #ca2c37;
+}
+
+.header-logo:active {
+  background-color: #b52933;
+}
+
+.main-logo {
+  width: 160px;
+  height: 65px;
+  margin-right: 202px;
+}
