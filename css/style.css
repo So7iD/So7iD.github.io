@@ -13,6 +13,13 @@
   color: #ffffff;
 }
 
+article:last-child {
+  font-family: "Atiba";
+  text-align: center;
+  color: #ffffff;
+  font-size: 54px;
+}
+
 body {
   position: relative;
 
