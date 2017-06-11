@@ -1,40 +1,249 @@
-ol {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+@font-face {
+  font-family: "Atiba";
+
+  src: url("../fonts/AtibaFont/Atiba.ttf");
 }
 
-li {
-  padding: 50px;
-}
+.main-header {
+  position: absolute;
 
-.header-logo {
-  display: inline-block;
-  width: 220px;
-  padding: 11px 0 7px 0;
-
-  font-size: 24px;
-  font-family: "Cuprum","Arial", sans-serif;
-  vertical-align: middle;
+  font-size: 54px;
+  font-family: "Atiba";
   text-align: center;
   color: #ffffff;
-  text-transform: uppercase;
-  text-decoration: none;
-
-  background-color: #ee3643;
-  box-shadow: 0 5px 0 0 #b52933;
 }
 
-.header-logo:hover {
-  background-color: #ca2c37;
+body {
+  position: relative;
+
+  min-width: 800px;
+  margin: 0;
+  padding: 0;
+
+  background: #25272a;
+  background-image: url("../img/night-4.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+
+  -webkit-transition: background-image 1s ease-in-out !important;
+          transition: background-image 1s ease-in-out !important;
 }
 
-.header-logo:active {
-  background-color: #b52933;
+body.day-background {
+  background: #ffdb88;
+  background-image: url("../img/night-5.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+
+  -webkit-transition: background-image 1s ease-in-out !important;
+          transition: background-image 1s ease-in-out !important;
 }
 
-.main-logo {
-  width: 160px;
-  height: 65px;
-  margin-right: 202px;
+.portfolio {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.site {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 50%;
+
+  background-color: transparent;
+}
+
+
+.site:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+
+  -webkit-transition: background-color 0.7s ease-out;
+}
+
+.button-con {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin-top: -18px;
+  margin-left: -76px;
+
+  cursor: default;
+}
+
+#dayIcon {
+  position: relative;
+  top: -3px;
+
+  width: 26px;
+  height: 26px;
+  margin: 0 7px;
+
+  fill: #9caec0;
+}
+
+#nightIcon {
+  position: relative;
+  top: -3px;
+
+  width: 26px;
+  height: 26px;
+  margin: 0 7px;
+
+  fill: #9caec0;
+}
+
+#dayIcon,
+#nightIcon {
+  cursor: pointer;
+}
+
+.toggle {
+  display: none;
+}
+
+.toggle,
+.toggle:after,
+.toggle:before,
+.toggle *,
+.toggle *:after,
+.toggle *:before,
+.toggle + .toggle-button {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+.toggle::-moz-selection,
+.toggle:after::-moz-selection,
+.toggle:before::-moz-selection,
+.toggle *::-moz-selection,
+.toggle *:after::-moz-selection,
+.toggle *:before::-moz-selection,
+.toggle + .toggle-button::-moz-selection {
+  background: none;
+}
+
+.toggle::selection,
+.toggle:after::selection,
+.toggle:before::selection,
+.toggle *::selection,
+.toggle *:after::selection,
+.toggle *:before::selection,
+.toggle + .toggle-button::selection {
+  background: none;
+}
+
+.toggle + .toggle-button {
+  position: relative;
+
+  display: inline-block;
+  width: 4em;
+  height: 2em;
+
+  border: 2px solid #333333;
+  outline: 0;
+  cursor: pointer;
+
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.toggle + .toggle-button:after,
+.toggle + .toggle-button:before {
+  content: "";
+  position: relative;
+
+  display: block;
+  width: 50%;
+  height: 100%;
+}
+
+.toggle + .toggle-button:after {
+  left: 0;
+}
+
+.toggle + .toggle-button:before {
+  display: none;
+}
+
+.toggle:checked + .toggle-button:after {
+  left: 50%;
+}
+
+.toggle + .toggle-button {
+  padding: 2px;
+
+  border: 2px solid rgba(156, 174, 192, 0.27);
+  border-radius: 2em;
+
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+
+.toggle + .toggle-button:after {
+  content: "";
+
+  background: rgba(156, 174, 192, 0.27);
+  border-radius: 1em;
+
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+
+.toggle:checked + .toggle-button:after {
+  left: 50%;
+}
+
+.site {
+  position: relative;
+}
+
+.project-title {
+  z-index: 5;
+
+  display: block;
+
+  text-align: center;
+}
+
+.technomart-img {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: transparent;
+
+  -webkit-transition: background 5s ease-in !important;
+          transition: background 5s ease-in !important;
+}
+
+.technomart-img:hover {
+  z-index: 2;
+  display: none; /* DELETE*/
+  background-image: url("../img/technomart.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% -30%;
+  background-size: 75%;
+  opacity: 0.4;
+
+  -webkit-transition: background 5s ease-in !important;
+          transition: background 5s ease-in !important;
+}
+
+
+.project-title {
+  display: none;
 }
