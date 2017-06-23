@@ -793,7 +793,6 @@ body {
   flex-flow: row nowrap;
   justify-content: flex-start;
 
-  background-color: lightgreen;
   border-bottom: 2px solid #e5e5e5;
 }
 
@@ -815,50 +814,92 @@ body {
 
 .sort .sort-title,
 .sort .sort-list {
-  margin-top: 3px;
   align-self: center;
+  margin-top: 5px;
+  margin-right: 40px;
+
   font-size: 12px;
   line-height: 18px;
   color: #000000;
   text-transform: uppercase;
-  margin-right: 40px;
 }
 
 .sort .sort-list {
-  width: 600px;
-  
   display: flex;
-  align-items: center;
+  flex: 1;
+  align-items: flex-start;
+  margin-right: 0;
 }
 
 .sort-list li {
   position: relative;
-}
 
-.sort-list a {
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.3);
   margin-right: 33px;
-  border-bottom: 1px dotted #81b3d2;
+
+  background-color: gsreen;
 }
 
 .sort-list li:nth-child(3) {
   margin-right: auto;
-  
 }
 
-.sort-list .btn-sort-up,
-.sort-list .btn-sort-down {
+.sort-list a {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.btn-sort:hover {
+  color: #81b3d2;
+}
+
+.btn-sort:active {
+  color: #000000;
+
+  border-bottom: 0;
+}
+
+.sort-list .active {
+  color: #81b3d2;
+
+  border-bottom: none;
+}
+
+.sort-list .btn-arrow {
   position: absolute;
-  font-size: 0;
-  background-color: black;
-  width: 5px;
-  height: 5px;
-  top: 0;
-  left: 0;
+  top: 2px;
+  left: 20px;
 
-  
+  width: 0;
+  height: 0;
+
+  font-size: 0;
+
+  border-width: 9px 6px 0 6px;
+  border-style: solid;
+  border-color: #cccccc transparent transparent transparent ;
 }
+
+.sort-list .btn-arrow:hover {
+  border-color: #000000 transparent transparent transparent ;
+}
+
+.sort-list .btn-arrow:active {
+  border-color: #81b3d2 transparent transparent transparent;
+}
+
+.sort-list .btn-sort-up {
+  top: 4px;
+  left: 30px;
+
+  transform: rotate(180deg);
+}
+
+.sort-list .active-arrow {
+  border-color: #81b3d2 transparent transparent transparent ;
+}
+
 
 .catalog ul {
   margin: 0;
@@ -868,20 +909,132 @@ body {
 }
 
 .item {
-  
   display: flex;
-  align-items: center;
-  background-color: lightyellow;
-  margin-bottom: 25px;
+  align-items: flex-start;
+
+  border-bottom: 2px solid #e5e5e5;
 }
 
 .item-left-column {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  width: 423px;
+  height: 150px;
   margin-right: auto;
-
 }
 
+.item-img {
+  width: 135px;
+  height: 90px;
+  margin: auto;
+  margin-right: 30px;
+}
 
+.item-info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-self: flex-start;
+  width: 258px;
+  margin-top: 10px;
 
+  text-transform: uppercase;
+}
+.item p {
+  margin: 0;
+  padding: 0;
+}
+
+.item-info .item-title {
+  width: 258px;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 7px;
+  padding: 0;
+}
+
+.item-info .item-accom-type {
+  margin-bottom: 13px;
+}
+
+.item-price {
+  width: 142px;
+}
+
+.btn-item {
+  display: inline-block;
+  padding: 3px 17px 3px;
+
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: #81b3d2;
+}
+
+.reserve {
+  margin-left: 5px;
+
+  background-color: #766357;
+}
+
+.about:hover {
+  background-color: #669ec0;
+}
+
+.about:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #5496bd;
+}
+
+.reserve:hover {
+  background-color: #604e43;
+}
+
+.reserve:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #503e33;
+}
+
+.item-title a {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.item .stars {
+  width: 110px;
+  height: 17px;
+  margin-top: 25px;
+  margin-bottom: 49px;
+  margin-left: 5px;
+
+  text-align: right;
+}
+
+.star {
+  margin-right: 2px;
+
+  font-size: 23px;
+  color: #81b3d2;
+}
+
+.item .item-rating {
+  margin-top: 0;
+  padding: 3px 17px 2px;
+
+  color: #666666;
+  text-transform: uppercase;
+
+  background-color: #f2f2f2;
+}
 
 .main-footer {
   position: absolute;
@@ -894,6 +1047,12 @@ body {
   padding: 36px 0 36px 133px;
 
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.hotels-footer {
+  position: relative;
+
+  background-color: #ffffff;
 }
 
 .main-footer .tag-ref {
