@@ -75,12 +75,13 @@ body {
   background-image: url("../img/header-background.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-blend-mode: color-burn;  
+  background-blend-mode: color-burn;
 }
 
 .page-header:hover .main-logo {
+  text-shadow: 5px 5px 5px  #000000;
+
   transition: all 0.2s linear;
-  text-shadow: 5px 5px 5px  #000000;               
 }
 
 .page-header__main-logo {
@@ -95,6 +96,7 @@ body {
 
 .main-logo {
   text-align: center;
+
   transition: all 0.3s linear;
 }
 
@@ -135,6 +137,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1px;
+
   transition: all 0.2s linear;
 }
 
@@ -201,6 +204,7 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
+
   transition: all 0.2s linear;
 }
 
@@ -217,7 +221,7 @@ body {
 .page-header__phone-number {
   box-sizing: border-box;
   width: 139px;
-  padding: 9px 10px 12px 10px;
+  padding: 9px 8px 12px 10px;
 }
 
 /*!!!!!!!!!!!!!!! CONTENT STYLES !!!!!!!!!!!!!!!*/
@@ -291,6 +295,7 @@ body {
   color: #00a1eb;
   text-transform: uppercase;
   text-decoration: none;
+
   transition: all 0.2s linear;
 }
 
@@ -300,6 +305,7 @@ body {
 
 .info__phone-number:active {
   opacity: 0.5;
+
   transition: all 0.2s linear;
 }
 
@@ -522,6 +528,7 @@ body {
 /*!!!!!!!!!!!!!!! FEATURES STYLES !!!!!!!!!!!!!!!*/
 
 .features {
+  text-align: center;
   box-sizing: border-box;
   width: 1280px;
   margin: 0 auto;
@@ -647,7 +654,7 @@ body {
 }
 
 .features__capabilities {
-  display: block;
+  
   box-sizing: border-box;
   width: 152px;
   margin: 0 auto;
@@ -767,6 +774,7 @@ body {
   color: #2eb2ef;
 
   background-color: #ffffff;
+
   transition: all 0.2s linear;
 }
 
@@ -846,6 +854,7 @@ body {
 .footer-nav__link {
   color: #737373;
   text-decoration: none;
+
   transition: all 0.2s linear;
 }
 
@@ -855,6 +864,7 @@ body {
 
 .footer-nav__link:active {
   opacity: 0.5;
+
   transition: all 0.2s linear;
 }
 
@@ -932,6 +942,7 @@ body {
   font-weight: 700;
   color: #737373;
   text-decoration: none;
+
   transition: all 0.2s linear;
 }
 
@@ -941,6 +952,7 @@ body {
 
 .footer-contacts__link:active {
   opacity: 0.5;
+
   transition: all 0.2s linear;
 }
 
@@ -968,6 +980,7 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
+
   transition: all 0.2s linear;
 }
 
@@ -977,6 +990,7 @@ body {
 
 .footer-copyright:active {
   opacity: 0.5;
+
   transition: all 0.2s linear;
 }
 
@@ -989,6 +1003,7 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
+
   transition: all 0.2s linear;
 }
 
@@ -998,5 +1013,6 @@ body {
 
 .author:active {
   opacity: 0.5;
+
   transition: all 0.2s linear;
 }
